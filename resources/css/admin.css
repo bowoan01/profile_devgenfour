@@ -1,0 +1,23 @@
+body {
+    background-color: #f5f6fa;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.85) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+table thead th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.card {
+    border-radius: 1rem;
+}
