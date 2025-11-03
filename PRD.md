@@ -1,306 +1,273 @@
-# 🧩 **Product Requirements Document (PRD)**
+# Product Requirement Document (PRD)
 
-## 📘 Project: Company Profile Website – CV Devgenfour
-
----
-
-### 1. **General Information**
-
-**Company Name:** CV Devgenfour
-**Address:** Indramayu Regency, West Java, Indonesia
-**Established:** 2022
-**CEO:** Sofyan Maulana
-**Business Type:** Software House (Web, Mobile, and IoT Development)
-**Website Language:** Indonesian (English version optional for future release)
+## Devgenfour Company Profile Website
 
 ---
 
-### 2. **Background**
+## 1. Background
 
-CV Devgenfour is a technology company focused on **Web, Mobile, and IoT application development**.
-Founded in 2022, the company is committed to delivering world-class digital solutions for businesses of all sizes — from startups to large enterprises — emphasizing **professionalism, integrity, and customer trust**.
+Devgenfour is a **software house** that has successfully handled multiple projects for various clients across different industries. However, the company currently lacks an **official website** to represent its brand, showcase its work, and attract new clients.
 
-This company profile website serves as Devgenfour’s official digital identity, designed to strengthen brand credibility, present services and portfolio, and provide an accessible channel for clients and partners to connect.
+The website will serve as **Devgenfour’s digital identity** — a professional platform that:
 
----
-
-### 3. **Product Objectives**
-
-1. Provide an official digital platform to represent CV Devgenfour online.
-2. Present company information, services, and portfolio in a professional and engaging manner.
-3. Serve as a direct communication channel for clients and partners.
-4. Build brand awareness and trust through modern web presence.
+* Highlights the company’s expertise and portfolio.
+* Builds credibility with potential clients and partners.
+* Communicates Devgenfour’s brand values and culture.
+* Serves as the main touchpoint for inquiries and collaborations.
 
 ---
 
-### 4. **Scope**
+## 2. Product Goals
 
-**Included:**
-
-* Public-facing company profile website.
-* Laravel-based admin dashboard for content management.
-* Contact form integration (Email / WhatsApp).
-* SEO configuration using *Spatie* package.
-
-**Excluded:**
-
-* Online payment functionality.
-* Automated multi-language translation (optional for future development).
-* Client-side user authentication (non-admin users).
+1. **Establish credibility** and position Devgenfour as a trusted software development partner.
+2. **Generate leads** through clear calls to action and contact channels.
+3. **Showcase the company’s portfolio** and range of services.
+4. **Express the brand identity** through a minimalist, modern, and professional interface.
 
 ---
 
-### 5. **Target Users**
+## 3. Target Users
 
-| User Type                | Description                                               | Objective                            |
-| ------------------------ | --------------------------------------------------------- | ------------------------------------ |
-| **Potential Clients**    | Businesses or individuals seeking IT development services | Learn about Devgenfour’s offerings   |
-| **Partners / Investors** | Organizations seeking collaboration or partnership        | Assess credibility and expertise     |
-| **Job Seekers**          | Individuals exploring career opportunities                | Understand company culture and roles |
-| **Internal Admins**      | Devgenfour’s management or content team                   | Manage and update website content    |
+* **Potential clients** — startups, enterprises, or institutions seeking software development services.
+* **Potential hires** — designers, developers, and project managers interested in joining Devgenfour.
+* **Business partners or investors** — organizations or individuals exploring collaboration opportunities.
 
 ---
 
-### 6. **Core Features**
+## 4. Design & Visual Style
 
-#### **Frontend**
+### Visual Direction
 
-1. **Landing Page** – Hero banner, tagline, and call-to-action (CTA: “Contact Us”).
-2. **About Us** – Company profile, vision, mission, and key values.
-3. **Services** – Overview of Web, Mobile, and IoT development services.
-4. **Portfolio** – Showcase of previous projects with details and visuals.
-5. **Clients & Partners** – Display of partner logos and testimonials.
-6. **Contact Page** – Integrated form linked to company email/WhatsApp.
-7. **Blog / News (Optional)** – Technology insights and company updates.
+* **Design language:** Minimalist, smooth, and clean.
+* **Mood:** Professional, modern, elegant.
+* **Primary accent color:** Light blue `#5AB3F1`, complemented by white and light gray tones.
+* **Typography:**
 
-#### **Backend (Admin Panel)**
+  * Headings: *Poppins* or *Inter* (bold, clean, modern).
+  * Body text: *Open Sans* or *Lato* (legible, neutral).
 
-1. **Dashboard Overview** – Displays metrics, contact messages, and recent updates.
-2. **Page Management** – CRUD operations for content pages (About, Services, Blog).
-3. **Portfolio Management** – CRUD for project data and image uploads.
-4. **Team Management** – CRUD for team members (name, role, photo, social links).
-5. **User Management** – Role and permission control using *Spatie*.
-6. **SEO Management** – Per-page metadata for better search engine visibility.
+### Design Principles
+
+* **Simplicity first:** Focus on essential content only.
+* **Ample whitespace:** Maintain visual clarity and breathing room.
+* **Consistent grid and spacing:** Harmonize layout across breakpoints.
+* **Fully responsive:** Optimized for mobile-first design.
 
 ---
 
-### 7. **Conceptual Wireframe**
+## 5. Website Structure
 
-#### 🏠 **Home Page Layout**
+### 1. Home / Landing Page
+
+* Hero section with headline:
+  *“We build digital products that empower your business.”*
+* CTA: **“Let’s Work Together”** → leads to Contact page.
+* Showcase of 3–4 top projects.
+* Optional client testimonials.
+* Core values: Quality, Collaboration, Innovation.
+
+### 2. About Us
+
+* Company background and timeline.
+* Leadership or team overview.
+* Core values and mission statement.
+
+### 3. Services
+
+* Overview of main services:
+
+  * **Custom Software Development**
+  * **UI/UX Design**
+  * **Mobile App Development**
+  * **Website Development**
+  * **System Integration & Maintenance**
+* CTA: **“Discuss Your Project.”**
+
+### 4. Portfolio
+
+* Grid-style project gallery.
+* Filter by category (Web, Mobile, Enterprise, etc.).
+* Each project page includes:
+
+  * Title, client, technologies, description, and screenshots.
+
+### 5. Contact
+
+* Form (name, email, message).
+* Company contact details and embedded Google Maps.
+* CTA: **“Schedule a Call.”**
+
+### 6. Blog (Optional — Phase 2)
+
+* Articles about technology, design thinking, and company updates.
+* Purpose: SEO and brand authority.
+
+---
+
+## 6. Key Features
+
+| Feature                      | Description                                                                  |
+| ---------------------------- | ---------------------------------------------------------------------------- |
+| **Simple Admin Panel**       | Built-in admin interface for managing all site content (no third-party CMS). |
+| **Responsive Design**        | Optimized for all screen sizes and devices.                                  |
+| **SEO Optimization**         | Fast loading, metadata, and structured headings.                             |
+| **Contact Form Integration** | Laravel-based mail system with validation.                                   |
+| **Image & File Management**  | Upload and serve images efficiently from storage.                            |
+| **Security**                 | CSRF protection, authentication, and spam prevention.                        |
+
+---
+
+## 7. Technical Specifications (Laravel Environment)
+
+| Category                  | Specification                                                           |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Language**              | PHP 8.3+                                                                |
+| **Framework**             | Laravel 12 (LTS preferred)                                              |
+| **Frontend**              | Laravel Blade + Tailwind CSS                                            |
+| **Interactivity**         | Alpine.js or Livewire for dynamic UI components                         |
+| **Database**              | MySQL 8+ or PostgreSQL 18+ with Eloquent ORM                            |
+| **Admin Panel**           | Custom-built within Laravel using Blade templates (no Filament or Nova) |
+| **Authentication**        | Laravel Breeze or Fortify (login/logout/password reset)                 |
+| **Caching & Performance** | Redis for caching and queues; Route & Config cache enabled              |
+| **Email System**          | Laravel Mail (Mailgun, Postmark, or SES)                                |
+| **Hosting**               | Nginx + PHP-FPM via Laravel Forge or Envoyer                            |
+| **Storage**               | Local or AWS S3 with Laravel Filesystem                                 |
+| **Analytics**             | Google Analytics 4 or Plausible                                         |
+| **SEO Tools**             | spatie/laravel-seo and spatie/laravel-sitemap                           |
+| **Security**              | CSRF/XSS protection, hCaptcha or reCAPTCHA for forms                    |
+| **Testing**               | PestPHP / PHPUnit for unit and feature tests                            |
+| **Monitoring**            | Laravel Telescope (dev), Sentry (production)                            |
+| **Performance Goals**     | TTFB < 200ms, LCP < 2.5s, PageSpeed ≥ 90 (desktop)                      |
+
+---
+
+## 8. Admin Panel Feature Breakdown
+
+### 8.1 Access & Authentication
+
+* Admin login with email/password
+* Forgot password & email reset
+* Session timeout after inactivity
+* Role support (Admin, optional Editor)
+
+**Route prefix:** `/admin`
+
+---
+
+### 8.2 Dashboard
+
+* Overview of total projects, services, posts, and messages
+* Quick links to “Add New” content
+* Recent contact submissions
+* Optional: Analytics summary from Google Analytics API
+
+---
+
+### 8.3 Content Management Modules
+
+#### a. Services Management
+
+* CRUD for services
+* Fields: title, short description, detailed description, icon, order
+* Actions: Add/Edit/Delete/Reorder
+
+#### b. Portfolio Management
+
+* CRUD for project case studies
+* Fields: title, client, category, tech stack, description, results, cover image, gallery
+* Publish/unpublish toggle
+
+#### c. Team Management
+
+* CRUD for team members
+* Fields: name, role, bio, photo, social links, order
+
+#### d. Blog Management (Phase 2)
+
+* CRUD for blog posts with WYSIWYG editor (Trix or TinyMCE)
+* Fields: title, slug, excerpt, content, cover image, tags, publish toggle
+
+#### e. Contact Messages
+
+* Read-only view of submissions from contact form
+* Mark as read or archive messages
+* Delete old entries
+
+---
+
+### 8.4 Admin Panel UI & UX
+
+* Sidebar navigation: Dashboard, Services, Portfolio, Team, Blog (optional), Contacts
+* Table views with pagination, search, and sorting
+* Form validation and flash notifications
+* File upload with image preview
+* CSRF protection and input sanitization
+* Clean two-column layout (sidebar + content area)
+
+---
+
+### 8.5 Routes & Structure
 
 ```
-+---------------------------------------------------+
-| [Logo] [Menu: Home | About | Services | Portfolio | Contact] |
-|---------------------------------------------------|
-| Hero Section: Tagline, Background Image, CTA Button |
-|---------------------------------------------------|
-| About Section: Brief company intro, vision & mission |
-|---------------------------------------------------|
-| Services Section: 3 cards showcasing core services  |
-|---------------------------------------------------|
-| Portfolio Section: Slider/Gallery of past projects  |
-|---------------------------------------------------|
-| Testimonials & Clients Section                     |
-|---------------------------------------------------|
-| Contact Section: Form + Google Map                 |
-|---------------------------------------------------|
-| Footer: Copyright | Social Media | Email           |
-+---------------------------------------------------+
-```
-
-#### ⚙️ **Admin Dashboard Layout**
-
-```
-Sidebar:
-- Dashboard
-- Pages
-- Services
-- Portfolio
-- Team
-- Blog
-- Users
-- Settings
-
-Main Panel:
-[Summary Cards: Total Projects | Visitors | Messages]
-[Recent Messages Table]
-[Traffic Chart Visualization]
-```
-
----
-
-### 8. **Design & Branding**
-
-| Element              | Description                                             |
-| -------------------- | ------------------------------------------------------- |
-| **Primary Colors**   | Blue (#007BFF) and White (#FFFFFF)                      |
-| **Secondary Colors** | Light Gray (#F8F9FA) and Dark Gray (#343A40)            |
-| **Typography**       | Poppins / Inter (Google Fonts)                          |
-| **Visual Style**     | Modern, professional, minimalistic, responsive          |
-| **Logo**             | Official CV Devgenfour logo (PNG/SVG)                   |
-| **Icons**            | Bootstrap Icons                                         |
-| **Layout**           | Responsive grid with smooth animations using JavaScript |
-
----
-
-### 9. **Technology Stack (Updated for Laragon v6)**
-
-| Component                         | Technology / Tool                                  |
-| --------------------------------- | -------------------------------------------------- |
-| **Programming Language**          | PHP 8.3                                            |
-| **Backend Framework**             | Laravel 12                                         |
-| **Frontend Framework**            | Bootstrap 5, JavaScript                            |
-| **Laravel Packages**              | Spatie (Role, Permission, SEO Tools)               |
-| **Local Development Environment** | **Laragon v6** (PHP 8.3, MySQL, Apache)            |
-| **Database Engine**               | MySQL (via Laragon)                                |
-| **Version Control**               | GitHub                                             |
-| **Web Server**                    | Apache (Laragon for local), Nginx (for production) |
-| **Security**                      | HTTPS, CSRF Protection, Laravel Authentication     |
-| **Deployment Target**             | VPS or Shared Hosting (cPanel / Plesk)             |
-| **Operating System (Dev)**        | Windows 10/11 with Laragon stack                   |
-
----
-
-### 10. **Conceptual Database Schema**
-
-Database Name: `devgenfour_profile_db`
-All migrations and seeding are managed through Laravel Artisan commands within the Laragon terminal.
-
-```
-TABLE users
-- id
-- name
-- email
-- password
-- role_id
-- created_at
-- updated_at
-
-TABLE roles
-- id
-- name
-- description
-
-TABLE services
-- id
-- title
-- description
-- icon
-- created_at
-- updated_at
-
-TABLE portfolios
-- id
-- title
-- description
-- image
-- client_name
-- project_date
-- created_at
-- updated_at
-
-TABLE team_members
-- id
-- name
-- position
-- photo
-- linkedin_url
-- created_at
-- updated_at
-
-TABLE blog_posts (optional)
-- id
-- title
-- slug
-- content
-- author_id
-- thumbnail
-- created_at
-- updated_at
-
-TABLE messages
-- id
-- name
-- email
-- phone
-- message
-- created_at
+/admin
+├── /dashboard
+├── /services
+│   ├── create / edit / delete
+├── /portfolio
+│   ├── create / edit / delete
+├── /team
+│   ├── create / edit / delete
+├── /blog (optional)
+│   ├── create / edit / delete
+├── /contacts
+│   ├── view / delete
+└── /profile
+    ├── change-password
 ```
 
 ---
 
-### 🧰 **Development Environment Notes**
+### 8.6 Technical Summary
 
-* All local development and hosting will run under **Laragon v6**, using its integrated Apache, PHP 8.3, and MySQL environment.
-* Local testing can use virtual hosts such as `http://devgenfour.test`.
-* Deployment configuration will use environment-specific `.env` files for local and production servers.
-
-Example `.env` (Local Laragon):
-
-```
-APP_NAME=Devgenfour
-APP_ENV=local
-APP_KEY=base64:xxxxxxxxxxxxxxxxxxxxxx
-APP_DEBUG=true
-APP_URL=http://devgenfour.test
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=devgenfour_profile_db
-DB_USERNAME=root
-DB_PASSWORD=
-```
+| Component       | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| **Views**       | Blade templates in `resources/views/admin`               |
+| **Controllers** | `app/Http/Controllers/Admin` namespace                   |
+| **Models**      | Service, Project, Post, TeamMember, ContactMessage       |
+| **Middleware**  | `auth`, `verified`, `admin`                              |
+| **Assets**      | Tailwind CSS, Alpine.js                                  |
+| **Uploads**     | Stored in `/storage/app/public/uploads`                  |
+| **Editor**      | Trix or TinyMCE (local only, no third-party integration) |
 
 ---
 
-### 11. **Non-Functional Requirements**
+## 9. Project Timeline (Estimation)
 
-| Aspect              | Specification                                                |
-| ------------------- | ------------------------------------------------------------ |
-| **Security**        | Password hashing (bcrypt), CSRF protection, input validation |
-| **Performance**     | Page load time under 3 seconds                               |
-| **SEO**             | Dynamic metadata and sitemap.xml                             |
-| **Responsiveness**  | Fully adaptive on all devices                                |
-| **Accessibility**   | WCAG 2.1 compliant color contrast                            |
-| **Maintainability** | Follows PSR-12 Laravel coding standards                      |
+| Phase                 | Duration | Deliverables                 |
+| --------------------- | -------- | ---------------------------- |
+| Research & Sitemap    | 1 week   | UX flow and architecture     |
+| Wireframe & UI Design | 2 weeks  | High-fidelity mockups        |
+| Development (Laravel) | 4 weeks  | Website + Simple Admin Panel |
+| Testing & Launch      | 1 week   | Public release               |
 
----
-
-### 12. **Development Timeline**
-
-| Phase                        | Duration  | Deliverable                              |
-| ---------------------------- | --------- | ---------------------------------------- |
-| Analysis & Design            | 1 week    | Sitemap, wireframe, and style guide      |
-| Backend Development          | 2 weeks   | Laravel structure, database, admin panel |
-| Frontend Development         | 1 week    | Responsive UI and animations             |
-| Integration & Testing        | 1 week    | QA, debugging, optimization              |
-| Deployment                   | 2 days    | Website goes live                        |
-| **Total Estimated Duration** | ± 5 weeks | Version 1.0 Launch                       |
+**Total estimated time:** 8 weeks
 
 ---
 
-### 13. **Success Criteria**
+## 10. Success Metrics
 
-✅ Responsive and accessible on all devices
-✅ Fully functional core modules (Profile, Services, Portfolio, Contact)
-✅ Admin can manage content without developer assistance
-✅ Indexed on Google within 2–4 weeks post-launch
-✅ Professional and modern UI aligned with Devgenfour’s branding
-
----
-
-### 14. **Future Enhancements**
-
-* Multi-language support (Indonesian/English).
-* Recruitment / Careers module.
-* Client login dashboard for project tracking.
-* API integration with Devgenfour’s internal CRM.
+* Bounce rate below **40%**
+* Average session duration above **1 minute**
+* Minimum **10 inquiries per month** via contact form
+* PageSpeed score above **90 (desktop)**
+* Admin panel fully functional and easy to use without documentation
 
 ---
 
-✨ **Document Status:** Final – Updated for Laragon v6 Environment
-📅 **Date:** October 31, 2025
-✍️ **Prepared by:** Andre Wibowo & ChatGPT (AI Assistant)
+## 11. Additional Notes
 
----
+* The final brand theme will revolve around **light blue** as the primary accent color.
+* The tone should be **tech-oriented yet human-centered**, avoiding overly corporate visuals.
+* Include **micro-interactions** for CTAs and transitions.
+* Ensure full **cross-browser compatibility**.
+* Maintain **separation between admin and public routes** for security and scalability.
