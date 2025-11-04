@@ -1,14 +1,12 @@
-# Product Requirement Document (PRD)
+# 📘 Product Requirement Document (PRD)
 
 ## Devgenfour Company Profile Website
 
----
-
 ## 1. Background
 
-Devgenfour is a **software house** that has successfully handled multiple projects for various clients across different industries. However, the company currently lacks an **official website** to represent its brand, showcase its work, and attract new clients.
+Devgenfour is a **software house** that has successfully handled various projects for clients across different industries. However, the company currently does not have an **official website** to represent its brand, showcase its work, and attract new clients.
 
-The website will serve as **Devgenfour’s digital identity** — a professional platform that:
+This website will serve as **Devgenfour’s digital identity** — a professional platform that:
 
 * Highlights the company’s expertise and portfolio.
 * Builds credibility with potential clients and partners.
@@ -20,15 +18,15 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 ## 2. Product Goals
 
 1. **Establish credibility** and position Devgenfour as a trusted software development partner.
-2. **Generate leads** through clear calls to action and contact channels.
-3. **Showcase the company’s portfolio** and range of services.
+2. **Generate leads** through clear calls-to-action (CTAs) and contact channels.
+3. **Showcase the company’s portfolio** and the range of services offered.
 4. **Express the brand identity** through a minimalist, modern, and professional interface.
 
 ---
 
 ## 3. Target Users
 
-* **Potential clients** — startups, enterprises, or institutions seeking software development services.
+* **Potential clients** — startups, companies, or institutions seeking software development services.
 * **Potential hires** — designers, developers, and project managers interested in joining Devgenfour.
 * **Business partners or investors** — organizations or individuals exploring collaboration opportunities.
 
@@ -51,7 +49,7 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 * **Simplicity first:** Focus on essential content only.
 * **Ample whitespace:** Maintain visual clarity and breathing room.
 * **Consistent grid and spacing:** Harmonize layout across breakpoints.
-* **Fully responsive:** Optimized for mobile-first design.
+* **Fully responsive:** Designed with a *mobile-first* approach.
 
 ---
 
@@ -61,15 +59,15 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 
 * Hero section with headline:
   *“We build digital products that empower your business.”*
-* CTA: **“Let’s Work Together”** → leads to Contact page.
-* Showcase of 3–4 top projects.
+* CTA: **“Let’s Work Together”** → leads to the Contact page.
+* Display of 3–4 featured projects.
 * Optional client testimonials.
 * Core values: Quality, Collaboration, Innovation.
 
 ### 2. About Us
 
 * Company background and timeline.
-* Leadership or team overview.
+* Leadership or team profiles.
 * Core values and mission statement.
 
 ### 3. Services
@@ -99,56 +97,85 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 
 ### 6. Blog (Optional — Phase 2)
 
-* Articles about technology, design thinking, and company updates.
+* Articles about technology, design, and company updates.
 * Purpose: SEO and brand authority.
 
 ---
 
 ## 6. Key Features
 
-| Feature                      | Description                                                                  |
-| ---------------------------- | ---------------------------------------------------------------------------- |
-| **Simple Admin Panel**       | Built-in admin interface for managing all site content (no third-party CMS). |
-| **Responsive Design**        | Optimized for all screen sizes and devices.                                  |
-| **SEO Optimization**         | Fast loading, metadata, and structured headings.                             |
-| **Contact Form Integration** | Laravel-based mail system with validation.                                   |
-| **Image & File Management**  | Upload and serve images efficiently from storage.                            |
-| **Security**                 | CSRF protection, authentication, and spam prevention.                        |
+| Feature                      | Description                                                              |
+| ---------------------------- | ------------------------------------------------------------------------ |
+| **Simple Admin Panel**       | Built-in admin interface for managing site content (no third-party CMS). |
+| **Responsive Design**        | Optimized for all screen sizes and devices.                              |
+| **SEO Optimization**         | Fast loading, proper metadata, and well-structured headings.             |
+| **Contact Form Integration** | Laravel-based email system with validation.                              |
+| **Image & File Management**  | Efficient upload and display from storage.                               |
+| **Security**                 | CSRF protection, authentication, and spam prevention.                    |
 
 ---
 
-## 7. Technical Specifications (Laravel Environment)
+## 7. Technical Specifications (Laravel Environment) — **Final Version**
 
-| Category                  | Specification                                                           |
-| ------------------------- | ----------------------------------------------------------------------- |
-| **Language**              | PHP 8.3+                                                                |
-| **Framework**             | Laravel 12 (LTS preferred)                                              |
-| **Frontend**              | Laravel Blade + Tailwind CSS                                            |
-| **Interactivity**         | Alpine.js or Livewire for dynamic UI components                         |
-| **Database**              | MySQL 8+ or PostgreSQL 18+ with Eloquent ORM                            |
-| **Admin Panel**           | Custom-built within Laravel using Blade templates (no Filament or Nova) |
-| **Authentication**        | Laravel Breeze or Fortify (login/logout/password reset)                 |
-| **Caching & Performance** | Redis for caching and queues; Route & Config cache enabled              |
-| **Email System**          | Laravel Mail (Mailgun, Postmark, or SES)                                |
-| **Hosting**               | Nginx + PHP-FPM via Laravel Forge or Envoyer                            |
-| **Storage**               | Local or AWS S3 with Laravel Filesystem                                 |
-| **Analytics**             | Google Analytics 4 or Plausible                                         |
-| **SEO Tools**             | spatie/laravel-seo and spatie/laravel-sitemap                           |
-| **Security**              | CSRF/XSS protection, hCaptcha or reCAPTCHA for forms                    |
-| **Testing**               | PestPHP / PHPUnit for unit and feature tests                            |
-| **Monitoring**            | Laravel Telescope (dev), Sentry (production)                            |
-| **Performance Goals**     | TTFB < 200ms, LCP < 2.5s, PageSpeed ≥ 90 (desktop)                      |
+| Category                  | Specification                                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Language**              | PHP 8.3+                                                                                               |
+| **Framework**             | Laravel 12 (LTS preferred)                                                                             |
+| **Frontend**              | **Laravel Blade + Bootstrap 5**                                                                        |
+| **UI Interactivity**      | **Vanilla JavaScript** for lightweight DOM manipulation (modals, dropdowns, validation, minor effects) |
+| **AJAX CRUD**             | **jQuery AJAX** for CRUD operations without page reload                                                |
+| **DataTable Integration** | **Yajra Laravel DataTables** for *server-side processing* (pagination, search, sort)                   |
+| **Role Management**       | **Spatie Laravel Permission** for role & permission management via middleware                          |
+| **Database**              | MySQL 8+ or PostgreSQL 18+ with Eloquent ORM                                                           |
+| **Admin Panel**           | Custom-built using Blade templates (no Filament or Nova)                                               |
+| **Authentication**        | Laravel Breeze (login/logout/reset password)                                                           |
+| **Caching & Performance** | Redis for caching & queues; route & config cache enabled                                               |
+| **Email System**          | Laravel Mail (Mailgun, Postmark, or SES)                                                               |
+| **Hosting**               | Nginx + PHP-FPM via Laravel Forge or Envoyer                                                           |
+| **Storage**               | Local or AWS S3 via Laravel Filesystem                                                                 |
+| **Analytics**             | Google Analytics 4 or Plausible                                                                        |
+| **SEO Tools**             | spatie/laravel-seo and spatie/laravel-sitemap                                                          |
+| **Security**              | CSRF/XSS protection, hCaptcha or reCAPTCHA for forms                                                   |
+| **Testing**               | PestPHP / PHPUnit for unit & feature tests                                                             |
+| **Monitoring**            | Laravel Telescope (dev), Sentry (production)                                                           |
+| **Performance Goals**     | TTFB < 200ms, LCP < 2.5s, PageSpeed ≥ 90 (desktop)                                                     |
 
 ---
 
-## 8. Admin Panel Feature Breakdown
+### 🔧 Technical Explanation
+
+1. **Bootstrap 5** is used for a modern, elegant, and fast UI development workflow.
+2. **Vanilla JS** handles lightweight UI interactions while keeping performance optimal.
+3. **jQuery AJAX** enables asynchronous CRUD operations without page reload.
+4. **Yajra DataTables** provides *pagination, search, and sort* via server-side rendering — efficient for large datasets.
+5. **Spatie Laravel Permission** offers full control over user roles and permissions:
+
+   * Default roles: `Admin`, `Editor`, `Viewer (optional)`
+   * Role & permission-based middleware (`role:Admin`, `permission:edit posts`)
+   * Built-in tables: `roles`, `permissions`, `model_has_roles`, `role_has_permissions`
+   * Route integration example:
+
+     ```php
+     Route::group(['middleware' => ['role:Admin']], function() {
+         // Routes for admin
+     });
+     ```
+6. The combination of **Spatie + Yajra + jQuery AJAX** results in a **lightweight, modular, and scalable** admin system.
+
+---
+
+## 8. Admin Panel Features
+
+*(Unchanged, now includes Spatie for role-based authorization)*
+
+---
 
 ### 8.1 Access & Authentication
 
-* Admin login with email/password
-* Forgot password & email reset
+* Admin login using email/password
+* Forgot password & reset via email
 * Session timeout after inactivity
-* Role support (Admin, optional Editor)
+* **Role Management** using Spatie (Admin, Editor, Viewer)
 
 **Route prefix:** `/admin`
 
@@ -157,25 +184,27 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 ### 8.2 Dashboard
 
 * Overview of total projects, services, posts, and messages
-* Quick links to “Add New” content
-* Recent contact submissions
+* Quick links for “Add New” actions
+* Dynamic data display using Yajra DataTables
 * Optional: Analytics summary from Google Analytics API
 
 ---
 
 ### 8.3 Content Management Modules
 
-#### a. Services Management
+*(All CRUD modules use jQuery AJAX + DataTables)*
+
+#### a. Service Management
 
 * CRUD for services
 * Fields: title, short description, detailed description, icon, order
-* Actions: Add/Edit/Delete/Reorder
+* Actions: Add / Edit / Delete / Reorder
 
 #### b. Portfolio Management
 
 * CRUD for project case studies
-* Fields: title, client, category, tech stack, description, results, cover image, gallery
-* Publish/unpublish toggle
+* Fields: title, client, category, technology, description, results, cover image, gallery
+* Publish / unpublish toggle
 
 #### c. Team Management
 
@@ -189,13 +218,15 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 
 #### e. Contact Messages
 
-* Read-only view of submissions from contact form
-* Mark as read or archive messages
+* Read-only view of contact form submissions
+* Mark as read or archive
 * Delete old entries
 
 ---
 
 ### 8.4 Admin Panel UI & UX
+
+*(Unchanged, now powered by DataTables with AJAX calls)*
 
 * Sidebar navigation: Dashboard, Services, Portfolio, Team, Blog (optional), Contacts
 * Table views with pagination, search, and sorting
@@ -206,7 +237,7 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 
 ---
 
-### 8.5 Routes & Structure
+### 8.5 Route Structure
 
 ```
 /admin
@@ -229,26 +260,27 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 
 ### 8.6 Technical Summary
 
-| Component       | Description                                              |
-| --------------- | -------------------------------------------------------- |
-| **Views**       | Blade templates in `resources/views/admin`               |
-| **Controllers** | `app/Http/Controllers/Admin` namespace                   |
-| **Models**      | Service, Project, Post, TeamMember, ContactMessage       |
-| **Middleware**  | `auth`, `verified`, `admin`                              |
-| **Assets**      | Tailwind CSS, Alpine.js                                  |
-| **Uploads**     | Stored in `/storage/app/public/uploads`                  |
-| **Editor**      | Trix or TinyMCE (local only, no third-party integration) |
+| Component       | Description                                                          |
+| --------------- | -------------------------------------------------------------------- |
+| **Views**       | Blade templates in `resources/views/admin`                           |
+| **Controllers** | Namespace `app/Http/Controllers/Admin`                               |
+| **Models**      | Service, Project, Post, TeamMember, ContactMessage, Role, Permission |
+| **Middleware**  | `auth`, `verified`, `role`, `permission`                             |
+| **Assets**      | Bootstrap 5, jQuery, Vanilla JS                                      |
+| **DataTable**   | Yajra DataTables (server-side rendering)                             |
+| **Uploads**     | Stored in `/storage/app/public/uploads`                              |
+| **Editor**      | Trix or TinyMCE (local, no third-party integration)                  |
 
 ---
 
 ## 9. Project Timeline (Estimation)
 
-| Phase                 | Duration | Deliverables                 |
-| --------------------- | -------- | ---------------------------- |
-| Research & Sitemap    | 1 week   | UX flow and architecture     |
-| Wireframe & UI Design | 2 weeks  | High-fidelity mockups        |
-| Development (Laravel) | 4 weeks  | Website + Simple Admin Panel |
-| Testing & Launch      | 1 week   | Public release               |
+| Phase                 | Duration | Deliverables                  |
+| --------------------- | -------- | ----------------------------- |
+| Research & Sitemap    | 1 week   | UX flow and site architecture |
+| Wireframe & UI Design | 2 weeks  | High-fidelity mockups         |
+| Development (Laravel) | 4 weeks  | Website + Simple Admin Panel  |
+| Testing & Launch      | 1 week   | Public release                |
 
 **Total estimated time:** 8 weeks
 
@@ -258,7 +290,7 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 
 * Bounce rate below **40%**
 * Average session duration above **1 minute**
-* Minimum **10 inquiries per month** via contact form
+* At least **10 inquiries per month** via contact form
 * PageSpeed score above **90 (desktop)**
 * Admin panel fully functional and easy to use without documentation
 
@@ -266,8 +298,10 @@ The website will serve as **Devgenfour’s digital identity** — a professional
 
 ## 11. Additional Notes
 
-* The final brand theme will revolve around **light blue** as the primary accent color.
-* The tone should be **tech-oriented yet human-centered**, avoiding overly corporate visuals.
+* The main theme remains **light blue (#5AB3F1)** as the primary accent color.
+* The visual tone should be **tech-oriented yet human-centered**, avoiding overly corporate aesthetics.
 * Include **micro-interactions** for CTAs and transitions.
-* Ensure full **cross-browser compatibility**.
-* Maintain **separation between admin and public routes** for security and scalability.
+* Ensure **cross-browser compatibility**.
+* Maintain **strict separation between admin and public routes** for security and scalability.
+
+---
